@@ -25,11 +25,12 @@
     Title="Lesson 4"
     ContentTemplate="{DataTemplate views:Lesson04a}"
     Route="lesson4" />
-    <!--
+
     <ShellContent
     Title="Lesson 5"
     ContentTemplate="{DataTemplate views:Lesson05a}"
     Route="lesson5" />
+    <!--
     <ShellContent
     Title="Lesson 6"
     ContentTemplate="{DataTemplate views:Lesson06a}"

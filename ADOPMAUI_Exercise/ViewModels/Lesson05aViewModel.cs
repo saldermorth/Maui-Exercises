@@ -1,38 +1,49 @@
-﻿//using ADOPMAUI_Exercise.Views.Lesson05;
+﻿using ADOPMAUI_Exercise.Views.Lesson05;
 using Microsoft.Maui.Controls;
+using System.Text.RegularExpressions;
 
 namespace ADOPMAUI_Exercise.ViewModels
 {
     public class Lesson05aViewModel
     {
-        public Lesson05aViewModel(Type type, string title, string description)
+        private static string RoutePrefix = "//lesson5/";
+        public Type Type { private set; get; }
+        public string Title { private set; get; }
+        public string Description { private set; get; }
+        public string Route { private set; get; }
+
+        public Lesson05aViewModel(Type type, string title, string description, string route = null)
         {
             Type = type;
             Title = title;
             Description = description;
+            Route = route ?? RoutePrefix + Regex.Replace(title.ToLower(), @"\W", "");
         }
-
-        public Type Type { private set; get; }
-
-        public string Title { private set; get; }
-
-        public string Description { private set; get; }
 
         static Lesson05aViewModel()
         {
             All = new List<Lesson05aViewModel>
             {
-/*
-                new Lesson05aViewModel(typeof(ContentPage1), "ContentPage1",
-                        "Navigate to ContentPage1"),
+               new Lesson05aViewModel(typeof(ListViewExercise1), "ListView Exercise1",
+                        "Connect a ListView to Datamodel"),
 
-                new Lesson05aViewModel(typeof(ContentPage2), "ContentPage2",
-                        "Navigate to ContentPage2"),
+                new Lesson05aViewModel(typeof(ListViewExercise2), "ListView Exercise2",
+                        "Customize the ListView by adding images"),
+
+                new Lesson05aViewModel(typeof(ListViewExercise3), "ListView Exercise3",
+                        "Customize the ListView by adding buttons"),
+
+                new Lesson05aViewModel(typeof(ListViewExercise4), "ListView Exercise4",
+                        "Use Linq to group items"),
                 
-                new Lesson05aViewModel(typeof(ContentPage3), "ContentPage3",
-                        "Navigate to ContentPage3"),
-*/
+                //new Lesson05aViewModel(typeof(ModelessNavigation1), "Modeless Navigation Exercise1",
+                //        "Navigate outside the Shell"),
             };
+
+            foreach (var item in All)
+            {
+                Routing.RegisterRoute(item.Route, item.Type);
+            }
         }
 
         public static IList<Lesson05aViewModel> All { private set; get; }
