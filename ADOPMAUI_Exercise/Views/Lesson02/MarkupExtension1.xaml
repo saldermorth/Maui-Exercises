@@ -18,21 +18,23 @@
 
             <StackLayout Orientation="Horizontal">
                 <StackLayout Orientation="Vertical">
-                    <Label Text="To be replaced">
-                        <Label.FontSize>5</Label.FontSize>
+                    <Label Text="{x:Static consts:AppConstants.Platform}">
+                        <Label.FontSize>
+                            <x:Static Member="consts:AppConstants.NormalFontSize"/>
+                        </Label.FontSize>
                     </Label>
-                    <Label FontSize="5">
+                    <Label FontSize="{x:Static consts:AppConstants.NormalFontSize}">
                         <Label.Text>
-                            To be replaced
+                            <x:Static Member="consts:AppConstants.Idiom"/>
                         </Label.Text>
                     </Label>
                 </StackLayout>
                 <StackLayout Orientation="Vertical">
-                    <Button Clicked="Button_Clicked_1" Text="Button1" FontSize="5"/>
+                    <Button Clicked="Button_Clicked_1" Text="Button1" FontSize="{x:Static consts:AppConstants.NormalFontSize}"/>
                     <Button Clicked="Button_Clicked_2">
                         <Button.Text>Button2</Button.Text>
                         <Button.FontSize>
-                           5
+                            <x:Static Member="consts:AppConstants.NormalFontSize"/>
                         </Button.FontSize>
                     </Button>
                 </StackLayout>

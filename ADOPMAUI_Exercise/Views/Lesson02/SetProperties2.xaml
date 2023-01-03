@@ -13,6 +13,17 @@
             Text="Welcome to .NET MAUI!"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+            <StackLayout Orientation="Horizontal">
+            <Label>
+                <Label.Text>Element Syntax</Label.Text>
+            </Label>
+            <Label Text="Attribute Syntax"/>
+            <Button Text="Click Me" Clicked="Button_Clicked">
+                <Button.FontAttributes>
+                    Bold
+                </Button.FontAttributes>
+            </Button>
+            </StackLayout>
         </VerticalStackLayout>
     </ScrollView>
 
