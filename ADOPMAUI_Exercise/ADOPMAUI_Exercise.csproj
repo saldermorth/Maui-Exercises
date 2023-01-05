@@ -124,6 +124,9 @@
 	  <MauiXaml Update="Views\Lesson05\ListViewExercise4.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\Lesson05\WebViewExplore.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\Lesson06a.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

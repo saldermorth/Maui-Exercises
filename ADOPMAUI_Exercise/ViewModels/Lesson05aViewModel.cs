@@ -36,8 +36,8 @@ namespace ADOPMAUI_Exercise.ViewModels
                 new Lesson05aViewModel(typeof(ListViewExercise4), "ListView Exercise4",
                         "Use Linq to group items"),
                 
-                //new Lesson05aViewModel(typeof(ModelessNavigation1), "Modeless Navigation Exercise1",
-                //        "Navigate outside the Shell"),
+                new Lesson05aViewModel(typeof(WebViewExplore), "WebView Explore",
+                        "Use WebView to read som newspapers"),
             };
 
             foreach (var item in All)
