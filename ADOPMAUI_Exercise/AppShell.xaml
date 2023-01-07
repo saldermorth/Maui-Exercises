@@ -39,10 +39,9 @@
     <FlyoutItem x:Name="lesson5news2" Title="Lesson 5 News2" Route="lesson5news2">
     </FlyoutItem>
 
-<!--
     <ShellContent
     Title="Lesson 6"
     ContentTemplate="{DataTemplate views:Lesson06a}"
     Route="lesson6" />
--->
+
 </Shell>
