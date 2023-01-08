@@ -41,7 +41,6 @@ namespace ADOPMAUI_Exercise.ViewModels
 
         public NonTrivialBindingExercise4_ViewModel()
         {
-            //Step 3: write the code so the first city in the list is shown immediately
             ShownCity = _cities[_cityIdx];
         }
 	}

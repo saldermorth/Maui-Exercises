@@ -21,39 +21,39 @@ x:Class="ADOPMAUI_Exercise.Views.Lesson06.NonTrivialBindingExercise4" Title="Gri
                     <StackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
 
                         <!-- Step 2: Set the Binding to show city Name-->
-                        <Label Text="{Binding ShownCity.Name}"  FontSize="20" FontAttributes="Bold" HorizontalOptions="Center"/>
+                        <Label Text=""  FontSize="20" FontAttributes="Bold" HorizontalOptions="Center"/>
 
                     </StackLayout>
                     <StackLayout Grid.Row="1" Grid.Column ="0" Grid.RowSpan="5">
 
                         <!-- Step 2: Set the Binding to show city image -->
-                        <Image Source="{Binding ShownCity.ImageSrc}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" 
+                        <Image Source="" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" 
                            Aspect="AspectFit"/>
 
                     </StackLayout>
                     <StackLayout Grid.Row="1" Grid.Column="1">
 
                         <!-- Step 2: Set the Binding to show city continent -->
-                        <Label Text="{Binding ShownCity.Continent, StringFormat='Continent: {0}'}" />
+                        <Label Text="{Binding , StringFormat='Continent: {0}'}" />
 
                     </StackLayout>
                     <StackLayout Grid.Row="2" Grid.Column="1">
 
                         <!-- Step 2: Set the Binding to show city population -->
-                        <Label Text="{Binding ShownCity.Population, StringFormat='Population: {0}'}" />
+                        <Label Text="{Binding , StringFormat='Population: {0}'}" />
 
                     </StackLayout>
 
                     <StackLayout Grid.Row="3" Grid.Column="1">
 
-                        <!-- Step 2: Set the Binding to next city command -->
-                        <Button Text="Next" Command="{Binding Next}" />
+                        <!-- Step 3: Set the Binding to next city command -->
+                        <Button Text="Next" Command="" />
 
                     </StackLayout>
                     <StackLayout Grid.Row="4" Grid.Column="1">
 
-                        <!-- Step 2: Set the Binding to previous city command -->
-                        <Button Text="Previous" Command="{Binding Prev}" />
+                        <!-- Step 3: Set the Binding to previous city command -->
+                        <Button Text="Previous" Command="" />
 
                     </StackLayout>
                 </Grid>

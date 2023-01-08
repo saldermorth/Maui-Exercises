@@ -41,33 +41,24 @@ namespace ADOPMAUI_Exercise.Views.Lesson06
         private async Task LoadPrimes()
         {
             if (!int.TryParse(enNrBatches.Text, out int result)) return;
+            int nrbatches = result;
 
             var progressReporter = new Progress<float>(async value =>
             {
-                progressBar1.Progress = value;
-                await progressBar2.ProgressTo(value, 750, Easing.Linear);
-
+                //Ex1. Code here to set the progressBars to new values
             });
 
-            progressBar1.Progress = 0;
-            progressBar2.Progress = 0;
 
-            int nrbatches = result;
-            layBusy.IsVisible = true;
-            activityIndicator.IsRunning = true;
-            lvPrimes.IsVisible = false;
+            //Ex1. Code here to initialize the progressBars values
 
+            //Ex2. Code here to make indikators visible or not
+ 
+            //The the new primes values and assign them to the ListView
             lvPrimes.ItemsSource = await service.GetPrimeBatchCountsAsync(nrbatches, progressReporter);
 
-            lvPrimes.IsVisible = true;
-            activityIndicator.IsRunning = false;
-            layBusy.IsVisible = false;
+            //Ex2. Code here to make indikators visible or not
         }
 
-        private async void lvPrimes_ItemTapped(object sender, ItemTappedEventArgs e)
-        {
-            var item = (PrimeBatch)e.Item;
-            await DisplayAlert("Primed", $"Between integer {item.BatchStart} and {item.BatchEnd} there are {item.NrPrimes} primes", "Got it!");
-        }
+        //Ex3. Code here to implement the ItemTapped event handler
     }
 }
