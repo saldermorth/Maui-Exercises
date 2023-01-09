@@ -21,7 +21,7 @@
                                VerticalOptions="CenterAndExpand" HorizontalOptions="Fill" Scale="2"/>
             </StackLayout>
             <StackLayout>
-                <ListView x:Name="lvPrimes" ItemTapped="lvPrimes_ItemTapped">
+                <ListView x:Name="lvPrimes">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                                 <TextCell Text="{Binding .}" Detail="  " />

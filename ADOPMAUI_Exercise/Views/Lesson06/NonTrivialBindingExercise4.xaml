@@ -33,27 +33,27 @@ x:Class="ADOPMAUI_Exercise.Views.Lesson06.NonTrivialBindingExercise4" Title="Gri
                     </StackLayout>
                     <StackLayout Grid.Row="1" Grid.Column="1">
 
-                        <!-- Step 2: Set the Binding to show city continent -->
-                        <Label Text="{Binding , StringFormat='Continent: {0}'}" />
+                        <!-- Step 2: Set the Binding to show city continent  format: Text="{Binding , StringFormat='Continent: {0}'}" -->
+                        <Label Text="" />
 
                     </StackLayout>
                     <StackLayout Grid.Row="2" Grid.Column="1">
 
                         <!-- Step 2: Set the Binding to show city population -->
-                        <Label Text="{Binding , StringFormat='Population: {0}'}" />
+                        <Label Text="" />
 
                     </StackLayout>
 
                     <StackLayout Grid.Row="3" Grid.Column="1">
 
                         <!-- Step 3: Set the Binding to next city command -->
-                        <Button Text="Next" Command="" />
+                        <Button Text="Next" />
 
                     </StackLayout>
                     <StackLayout Grid.Row="4" Grid.Column="1">
 
                         <!-- Step 3: Set the Binding to previous city command -->
-                        <Button Text="Previous" Command="" />
+                        <Button Text="Previous" />
 
                     </StackLayout>
                 </Grid>

@@ -27,8 +27,8 @@
                 <StackLayout>
                     <Label Text="Step1 here"/>
 
-                    <!-- Step 1 begin -->
-                    <Button Text="Set to middle" Command=""/>
+                    <!-- Step 1 begin  Bind property Command, i.e. <Button Text="Set to middle" Command="{Binding }"  />-->
+                    <Button Text="Set to middle"/>
                     <!-- Step 1 end -->
                 </StackLayout>
             </Border>

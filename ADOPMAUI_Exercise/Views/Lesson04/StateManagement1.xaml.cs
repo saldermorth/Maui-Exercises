@@ -15,6 +15,8 @@ namespace ADOPMAUI_Exercise.Views.Lesson04
 
             var startMessage = Global.Data.Message;
             var startTime = Global.Data.Time;
+
+            lvFriends.ItemsSource = Global.Data.myBlueFriends;
         }
     }
 }

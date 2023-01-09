@@ -34,16 +34,16 @@
                         <Label Text=""
                             VerticalOptions="CenterAndExpand" 
                             HorizontalOptions="CenterAndExpand" />
-                        <Slider Minimum="0" Maximum="1" Value ="" />
+                        <Slider Minimum="0" Maximum="1" />
 
                         <Label Text=""
                             VerticalOptions="CenterAndExpand" 
                             HorizontalOptions="CenterAndExpand" />
-                        <Stepper Minimum="0" Maximum="10" Increment="1" Value ="" />
+                        <Stepper Minimum="0" Maximum="10" Increment="1" />
                         <!-- Step 3  end -->
 
                         <!-- Step 5 begin -->
-                        <Button Text="Set to middle" Clicked="Button_Clicked_1"/>
+                        <Button Text="Set to middle"/>
                         <!-- Step 5 end -->
 
                         <Button Text="Check Instance Values" Clicked="Button_Clicked_2" />
