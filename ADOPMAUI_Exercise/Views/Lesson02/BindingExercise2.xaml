@@ -1,39 +1,45 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ADOPMAUI_Exercise.Views.Lesson02.BindingExercise2"
-             Title="BindingExercise2">
+<ContentPage
+    x:Class="ADOPMAUI_Exercise.Views.Lesson02.BindingExercise2"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="BindingExercise2">
     <StackLayout Padding="10">
 
-        <StackLayout VerticalOptions="FillAndExpand">
-            <Label Text="TEXT"
-                   FontSize="80"
-                   HorizontalOptions="Center"
-                   VerticalOptions="EndAndExpand"
-                   Rotation="{Binding Value}" />
 
-            <BoxView Color="#800000FF"
-                     WidthRequest="180"
-                     HeightRequest="40"
-                     HorizontalOptions="Center"
-                     VerticalOptions="StartAndExpand"
-                     Rotation="{Binding Value}" />
+        <StackLayout Rotation="{Binding Source={x:Reference slider1}, Path=Value}" VerticalOptions="FillAndExpand">
+            <Label
+                FontSize="80"
+                HorizontalOptions="Center"
+                Rotation="{Binding Value}"
+                Text="TEXT"
+                VerticalOptions="EndAndExpand" />
+
+            <BoxView
+                HeightRequest="40"
+                HorizontalOptions="Center"
+                Rotation="{Binding Value}"
+                VerticalOptions="StartAndExpand"
+                WidthRequest="180"
+                Color="#800000FF" />
         </StackLayout>
         <Slider x:Name="slider1" Maximum="360" />
 
         <StackLayout x:Name="stackLayout" VerticalOptions="FillAndExpand">
-            <Label Text="TEXT"
-                   FontSize="80"
-                   HorizontalOptions="Center"
-                   VerticalOptions="EndAndExpand"
-                   Rotation="{Binding Value}" />
+            <Label
+                FontSize="80"
+                HorizontalOptions="Center"
+                Rotation="{Binding Value}"
+                Text="TEXT"
+                VerticalOptions="EndAndExpand" />
 
-            <BoxView Color="#800000FF"
-                     WidthRequest="180"
-                     HeightRequest="40"
-                     HorizontalOptions="Center"
-                     VerticalOptions="StartAndExpand"
-                     Rotation="{Binding Value}" />
+            <BoxView
+                HeightRequest="40"
+                HorizontalOptions="Center"
+                Rotation="{Binding Value}"
+                VerticalOptions="StartAndExpand"
+                WidthRequest="180"
+                Color="#800000FF" />
         </StackLayout>
         <Slider x:Name="slider2" Maximum="360" />
     </StackLayout>

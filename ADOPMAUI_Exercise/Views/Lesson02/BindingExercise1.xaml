@@ -1,38 +1,57 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ADOPMAUI_Exercise.Views.Lesson02.BindingExercise1"
-             Title="BindingExercise1">
-    <StackLayout Padding="10, 0">
-        <Label Text="Label with basic binding in XAML"
-               FontSize="30"
-               HorizontalOptions="Center"
-               VerticalOptions="CenterAndExpand" />
+<ContentPage
+    x:Class="ADOPMAUI_Exercise.Views.Lesson02.BindingExercise1"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="BindingExercise1">
+    <StackLayout Padding="10,0">
+        <Label
+            x:Name="label"
+            CharacterSpacing="{Binding Source={x:Reference slider1a}, Path=Value}"
+            FontSize="30"
+            HorizontalOptions="Center"
+            Opacity="{Binding Source={x:Reference slider1a}, Path=Value}"
+            Rotation="{Binding Source={x:Reference slider1b}, Path=Value}"
+            Scale="{Binding Source={x:Reference slider1c}, Path=Value}"
+            Text="Freemind"
+            VerticalOptions="CenterAndExpand" />
 
-        <Slider x:Name="slider1a"
-                Maximum="360"
-                VerticalOptions="CenterAndExpand" />
-        <Slider x:Name="slider1b"
-                Maximum="1"
-                VerticalOptions="CenterAndExpand" Value="0.5"/>
-        <Slider x:Name="slider1c"
-                Maximum="1"
-                VerticalOptions="CenterAndExpand" Value="0.5" />
+        <Slider
+            x:Name="slider1a"
+            Maximum="10"
+            VerticalOptions="CenterAndExpand" />
+        <Slider
+            x:Name="slider1b"
+            Maximum="100"
+            VerticalOptions="CenterAndExpand" />
 
-        <Label x:Name="label2" Text="Label with basic binding in C#"
-               FontSize="30"
-               HorizontalOptions="Center"
-               VerticalOptions="CenterAndExpand"/>
+        <Slider
+            x:Name="slider1c"
+            Maximum="100"
+            VerticalOptions="CenterAndExpand"
+            Value="0.5" />
 
-        <Slider x:Name="slider2a"
-                Maximum="360"
-                VerticalOptions="CenterAndExpand" />
-        <Slider x:Name="slider2b"
-                Maximum="1"
-                VerticalOptions="CenterAndExpand" Value="0.5"/>
-        <Slider x:Name="slider2c"
-                Maximum="1"
-                VerticalOptions="CenterAndExpand" Value="0.5" />
+        <Label
+            x:Name="label2"
+            FontSize="30"
+            HorizontalOptions="Center"
+            Text="Label with basic binding in C#"
+            VerticalOptions="CenterAndExpand" />
+
+        <Slider
+            x:Name="slider2a"
+            Maximum="360"
+            VerticalOptions="CenterAndExpand" />
+        <Slider
+            x:Name="slider2b"
+            Maximum="1"
+            VerticalOptions="CenterAndExpand"
+            Value="0.5" />
+        <Slider
+            x:Name="slider2c"
+            Maximum="1"
+            VerticalOptions="CenterAndExpand"
+            Value="0.5" />
 
     </StackLayout>
 </ContentPage>
